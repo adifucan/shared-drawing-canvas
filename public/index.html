@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sockets Example</title>
+    <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+<!--    import socket.io into html client-->
+    <script src="https://cdn.jsdelivr.net/npm/socket.io-client@2/dist/socket.io.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+
+    <style>
+        body {
+            padding: 20px;
+        }
+        .color-holder {
+            background: #fff;
+            cursor: pointer;
+            border: 1px solid #AAA;
+            width: 40px;
+            height: 36px;
+            float: left;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>Choose color (# hex)</p>
+    <input type="text" name="custom_color" placeholder="#FFFFFF" id="pickcolor"/>
+    <div id="color-holder" class="color-holder call-picker"></div>
+    <button id="color-btn">Change color</button>
+    <br />
+    <p>Choose stroke width</p>
+    <input type="text" name="stroke_width" placeholder="4" id="stroke-width-picker"/>
+    <button id="stroke-btn">Change stroke width</button>
+    <div>
+        <button id="clean">Clean Canvas</button>
+    </div>
+</div>
+</body>
+</html>
